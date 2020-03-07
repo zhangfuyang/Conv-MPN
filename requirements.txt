@@ -1,0 +1,6 @@
+pytorch==1.2.0
+numpy
+opencv-python
+svgwrite
+scikit-image
+matplotlib
