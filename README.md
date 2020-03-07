@@ -19,16 +19,16 @@ journal = {arXiv preprint arXiv:1912.01756}
 
 ## Environment Setup
 
-The implementation is based on Python3.5 and Pytorch1.2. You can do `pip install -r requirements.txt` to install all the dependencies.
+The implementation is based on Python3.5 and Pytorch1.2. You can do `pip install -r requirements.txt` to install the dependencies.
 
 ## Data Download
-**TODO**: link data repo
+The dataset has been released at this [repository](https://github.com/ennauata/buildings2vec).
 
 ## Data preprocessing
-**Corner detection**: Given an input RGB image, we first use Faster-RCNN with ResNet-50 as the backbone to detect corner candidates. We treat each corner as 8x8 bounding box with a corner at the center. In the training, building graphs are generated from annotation and detected corners. In the testing, we only use detected corners.
+**Corner detection**: Given an input RGB image, we first use mask-rcnn to detect corner candidates. We treat each corner as 8x8 bounding box with a corner at the center. In the training, building graphs are generated from annotation and detected corners. In the testing, we only use detected corners. See `./corner_detection/README.md` for information related to installation and environment setup.
 
-1. run `script` to train the corner detector.
-2. run `dasdasd` to generate detected corners for the dataset.
+1. run `./corner_detection/main.py` to train the corner detector.
+2. run `./corner_detection/demo.py` to generate detected corners for the dataset.
 3. Note that the above instructions are for processing data with annotation files. If the aim is to run pre-trained Conv-MPN, you can just simply download the corner detection results [here](TODO).
 
 
@@ -50,7 +50,7 @@ You can modify some settings in the `config.py`.
 	2. conv_mpn = false, gnn = true means using gnn network
 	3. conv_mpn = false, gnn = false means per edge classification network.
 
-We compared all the experiments in the paper, please see Experiemnt Section for the details.
+We compared all the experiments in the paper, please see Experiemnt Section in the paper for the details.
 
 ### Testing
 
@@ -59,7 +59,8 @@ To evaluate the performance or our trained model, please run:
 python demo.py
 ```
 
-Same with the Trainin
+link pretrained model: TBD
+
 
 # Contact
-If you have any questions, please contact me at fuyang.zhang97@gmail.com
+If you have any questions, please contact me at fuyang.zhang97@gmail.com or fuyangz@sfu.ca
