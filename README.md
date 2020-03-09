@@ -29,7 +29,7 @@ The dataset has been released at this [repository](https://github.com/ennauata/b
 
 1. run `./corner_detection/main.py` to train the corner detector.
 2. run `./corner_detection/demo.py` to generate detected corners for the dataset.
-3. Note that the above instructions are for processing data with annotation files. If the aim is to run pre-trained Conv-MPN, you can just simply download the corner detection results [here](TODO).
+3. Note that the above instructions are for processing data with annotation files. If the aim is to run pre-trained Conv-MPN, you can just simply download the corner detection results [here](https://drive.google.com/open?id=1AikD1FlNfpFqJy3g-mx8V2KtpYKDzV0Q) and pretrained model [here](https://drive.google.com/open?id=1ov-9ejGWpzUy0-M2hGiPgv4bK5hlR26I).
 
 
 ## Conv-MPN
@@ -59,7 +59,7 @@ To evaluate the performance or our trained model, please run:
 python demo.py
 ```
 
-link pretrained model: TBD
+You can download pretrained model from [here](https://drive.google.com/open?id=1CEQd2kSTMwlgKyyrKDdqBmJbqUCmnNFq).
 
 
 # Contact
