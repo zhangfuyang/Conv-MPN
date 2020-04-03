@@ -22,7 +22,7 @@ journal = {arXiv preprint arXiv:1912.01756}
 The implementation is based on Python3.5 and Pytorch1.2. You can do `pip install -r requirements.txt` to install the dependencies.
 
 ## Data Download
-The dataset has been released at this [repository](https://github.com/ennauata/buildings2vec).
+Please download data from this [link](https://www.dropbox.com/sh/q1jmqnm26q21h1a/AABtxO0Uni9eZs-Qs37HJTJLa?dl=0). The dataset we used is from the paper ["Vectorizing World Buildings: Planar Graph Reconstruction by Primitive Detection and Relationship Classification"](https://arxiv.org/abs/1912.05135).
 
 ## Data preprocessing
 **Corner detection**: Given an input RGB image, we first use mask-rcnn to detect corner candidates. We treat each corner as 8x8 bounding box with a corner at the center. In the training, building graphs are generated from annotation and detected corners. In the testing, we only use detected corners. See `./corner_detection/README.md` for information related to installation and environment setup.
